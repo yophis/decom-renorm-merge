@@ -1,0 +1,26 @@
+models:
+  - model: allenai/Llama-3.1-Tulu-3-8B  # HuggingFace's repo id, or local path
+    parameters:
+      coefficient: 1.0
+  - model: allenai/Llama-3.1-Tulu-3.1-8B
+    parameters:
+      coefficient: 1.0
+
+base_model: allenai/Llama-3.1-Tulu-3-8B-DPO
+
+merging_config:
+  singular_matrices_drop_rate: 0.8
+  direction: vertical  # Direction of the joint decomposition: "vertical" for DRM-V, "horizontal" for DRM-H
+  linear_parameter_regex_pattern:  # Regex pattern of linear parameter weight name (FFN)
+    - ".*weight.*"
+    
+  linear_parameter_ignore_regex_pattern:  # Regex pattern of linear parameter weight name to avoid (e.g. embedding weight)
+    - ".*embed_tokens.*"
+    - ".*lm_head.*"
+  ignore_module_regex_pattern: []  # Regex pattern of module name to ignore during merging (e.g. classification head)
+  enable_disjoint_mean: true
+  enable_sign_resolution: true
+  non_linear_module_entries_drop_rate: 0.0
+  dtype: float32
+
+save_path: ./tulu-drm-v
