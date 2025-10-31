@@ -1,8 +1,13 @@
 # Decom-Renorm-Merge (DRM)
 
+[[Paper]](https://arxiv.org/abs/2505.23117) &nbsp;  [[Models]](https://huggingface.co/collections/yophis/decom-renorm-merge-checkpoints)
+
+
 Implementation of **Decom-Renorm-Merge (DRM)** from our paper: [Decom-Renorm-Merge: Model Merging on the Right Space Improves Multitasking](https://arxiv.org/abs/2505.23117).
 
 DRM is a model merging technique that combines the capabilities of multiple fine-tuned models into a single multitasking model through a shared representation space.
+
+---
 
 ![DRM](assets/drm.png)
 
@@ -14,6 +19,7 @@ DRM is a model merging technique that combines the capabilities of multiple fine
 *   Support for merging both fully fine-tuned models and PEFT models (e.g. LoRA).
 *   Highly configurable merging process via a single YAML file.
 *   Pytorch-based, designed for clarity and extensibility.
+*   Trained models are **released** to facilitate further research.
 
 ## 🚀 Getting Started
 
