@@ -55,6 +55,56 @@ The merging process is controlled by a single command that points to a configura
 
 After the script finishes, the merged model will be saved to the directory specified by `save_path` in your configuration file.
 
+## 📦 Models and Checkpoints
+
+To encourage further research, we are releasing all the finetuned checkpoints used in our paper on HuggingFace Hub.
+
+These are the individual models, each fine-tuned on a specific task, that serve as the input for the merging process.
+
+### Llama-3.1-8B
+
+| Fine-Tuning Dataset | HuggingFace Hub ID |
+| :--- | :--- |
+| QNLI | [yophis/DRM-Llama-3.1-8B-qnli](https://huggingface.co/yophis/DRM-Llama-3.1-8B-qnli) |
+| SST2 | [yophis/DRM-Llama-3.1-8B-sst2](https://huggingface.co/yophis/DRM-Llama-3.1-8B-sst2) |
+| RTE | [yophis/DRM-Llama-3.1-8B-rte](https://huggingface.co/yophis/DRM-Llama-3.1-8B-rte) |
+| MNLI | [yophis/DRM-Llama-3.1-8B-mnli](https://huggingface.co/yophis/DRM-Llama-3.1-8B-mnli) |
+| CoLA | [yophis/DRM-Llama-3.1-8B-cola](https://huggingface.co/yophis/DRM-Llama-3.1-8B-cola) |
+
+### DeBERTa-v3-Base
+
+| Fine-Tuning Dataset | HuggingFace Hub ID |
+| :--- | :--- |
+| WinoGrande | [yophis/DRM-DeBERTa-v3-Base-winogrande](https://huggingface.co/yophis/DRM-DeBERTa-v3-Base-winogrande) |
+| StoryCloze | [yophis/DRM-DeBERTa-v3-Base-storycloze](https://huggingface.co/yophis/DRM-DeBERTa-v3-Base-storycloze) |
+| QASC | [yophis/DRM-DeBERTa-v3-Base-qasc](https://huggingface.co/yophis/DRM-DeBERTa-v3-Base-qasc) |
+| WikiQA | [yophis/DRM-DeBERTa-v3-Base-wikiqa](https://huggingface.co/yophis/DRM-DeBERTa-v3-Base-wikiqa) |
+| QuaRTz | [yophis/DRM-DeBERTa-v3-Base-quartz](https://huggingface.co/yophis/DRM-DeBERTa-v3-Base-quartz) |
+| PAWS | [yophis/DRM-DeBERTa-v3-Base-paws](https://huggingface.co/yophis/DRM-DeBERTa-v3-Base-paws) |
+
+### T5-Base
+
+| Fine-Tuning Dataset | HuggingFace Hub ID |
+| :--- | :--- |
+| WinoGrande | [yophis/DRM-T5-Base-winogrande](https://huggingface.co/yophis/DRM-T5-Base-winogrande) |
+| StoryCloze | [yophis/DRM-T5-Base-storycloze](https://huggingface.co/yophis/DRM-T5-Base-storycloze) |
+| QASC | [yophis/DRM-T5-Base-qasc](https://huggingface.co/yophis/DRM-T5-Base-qasc) |
+| WikiQA | [yophis/DRM-T5-Base-wikiqa](https://huggingface.co/yophis/DRM-T5-Base-wikiqa) |
+| QuaRTz | [yophis/DRM-T5-Base-quartz](https://huggingface.co/yophis/DRM-T5-Base-quartz) |
+| PAWS | [yophis/DRM-T5-Base-paws](https://huggingface.co/yophis/DRM-T5-Base-paws) |
+
+### T5-Large
+
+| Fine-Tuning Dataset | HuggingFace Hub ID |
+| :--- | :--- |
+| WinoGrande | [yophis/DRM-T5-Large-winogrande](https://huggingface.co/yophis/DRM-T5-Large-winogrande) |
+| StoryCloze | [yophis/DRM-T5-Large-storycloze](https://huggingface.co/yophis/DRM-T5-Large-storycloze) |
+| QASC | [yophis/DRM-T5-Large-qasc](https://huggingface.co/yophis/DRM-T5-Large-qasc) |
+| WikiQA | [yophis/DRM-T5-Large-wikiqa](https://huggingface.co/yophis/DRM-T5-Large-wikiqa) |
+| QuaRTz | [yophis/DRM-T5-Large-quartz](https://huggingface.co/yophis/DRM-T5-Large-quartz) |
+| PAWS | [yophis/DRM-T5-Large-paws](https://huggingface.co/yophis/DRM-T5-Large-paws) |
+
+
 ## ⚙️ DRM Configuration
 
 The entire merging process is controlled by a YAML config file. Below is an example and a detailed breakdown of all parameters.
